@@ -1,5 +1,28 @@
 package com.careerdevs.vehiclesRESTpractice;
 
+//Create a new Car Rental project.
+//        Create a Car Entity and controller
+//        Create the following routes:
+//        Read All Cars
+//        Read One Car by Id
+//        Create One Car
+//
+//
+//        Bonus Challenges:
+//        Create a Customer Entity and Controller
+//        Create the same Customer Routes
+//
+//
+//        Using your knowledge of Java Lists Attempt the following routes:
+//        Update Car/Customer by Id - hint: you can use Post for this
+//        Destroy Car/Customer by id - hint: the HTTP verb for this is Delete can you determine the @annotation?
+
+
+
+
+
+
+
 public abstract class Vehicle {
     private Long id;
     private String make;
