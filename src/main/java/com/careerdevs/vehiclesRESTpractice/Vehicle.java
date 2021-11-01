@@ -18,13 +18,11 @@ package com.careerdevs.vehiclesRESTpractice;
 //        Destroy Car/Customer by id - hint: the HTTP verb for this is Delete can you determine the @annotation?
 
 
-
-
-
-
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 public abstract class Vehicle {
-    private Long id;
+    private @Id @GeneratedValue Long id;
     private String make;
     private String model;
     private Integer year;
