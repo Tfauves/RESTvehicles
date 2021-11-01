@@ -1,22 +1,5 @@
 package com.careerdevs.vehiclesRESTpractice;
 
-//Create a new Car Rental project.
-//        Create a Car Entity and controller
-//        Create the following routes:
-//        Read All Cars
-//        Read One Car by Id
-//        Create One Car
-//
-//
-//        Bonus Challenges:
-//        Create a Customer Entity and Controller
-//        Create the same Customer Routes
-//
-//
-//        Using your knowledge of Java Lists Attempt the following routes:
-//        Update Car/Customer by Id - hint: you can use Post for this
-//        Destroy Car/Customer by id - hint: the HTTP verb for this is Delete can you determine the @annotation?
-
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -26,11 +9,11 @@ public abstract class Vehicle {
     private String make;
     private String model;
     private Integer year;
-    private Long currentOdometer;
+    private Integer currentOdometer;
 
     public Vehicle() {}
 
-    public Vehicle(Long id, String make, String model, Integer year, Long currentOdometer) {
+    public Vehicle(Long id, String make, String model, Integer year, Integer currentOdometer) {
         this.id = id;
         this.make = make;
         this.model = model;
@@ -70,11 +53,11 @@ public abstract class Vehicle {
         this.year = year;
     }
 
-    public Long getCurrentOdometer() {
+    public Integer getCurrentOdometer() {
         return currentOdometer;
     }
 
-    public void setCurrentOdometer(Long currentOdometer) {
+    public void setCurrentOdometer(Integer currentOdometer) {
         this.currentOdometer = currentOdometer;
     }
 
