@@ -1,11 +1,7 @@
 package com.careerdevs.vehiclesRESTpractice;
 
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 public abstract class Vehicle {
-    private @Id @GeneratedValue Long id;
+    private Long id;
     private String make;
     private String model;
     private Integer year;
