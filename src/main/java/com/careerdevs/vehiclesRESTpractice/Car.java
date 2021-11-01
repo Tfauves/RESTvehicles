@@ -1,8 +1,9 @@
 package com.careerdevs.vehiclesRESTpractice;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.Entity;
 
+
+@Entity
 public class Car extends Vehicle {
 
     public Car() {}
