@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
-@RequestMapping
+@RequestMapping("/customers")
 public class CustomerController {
     Map<Long, Customer> customers = new HashMap<>();
     AtomicLong idCounter = new AtomicLong();
