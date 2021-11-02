@@ -42,16 +42,16 @@ public class CustomerController {
     public Customer updateCustomer(@PathVariable Long id, @RequestBody Customer updateData) {
         Customer customer = customers.get(id);
         if (updateData.getFirstName() != null) {
-            customer.setFirstName(customer.getFirstName());
+            customer.setFirstName(updateData.getFirstName());
         }
         if (updateData.getLastName() != null) {
-            customer.setLastName(customer.getLastName());
+            customer.setLastName(updateData.getLastName());
         }
         if (updateData.getEmail() != null) {
-            customer.setEmail(customer.getEmail());
+            customer.setEmail(updateData.getEmail());
         }
         if (updateData.getPhone() != null) {
-            customer.setPhone(customer.getPhone());
+            customer.setPhone(updateData.getPhone());
         }
         return customer;
     }

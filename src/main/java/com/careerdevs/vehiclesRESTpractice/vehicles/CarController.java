@@ -81,6 +81,10 @@ public class CarController {
         return car;
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteCar (@PathVariable Long id) {
+        cars.remove(id);
+    }
 
 
 }
