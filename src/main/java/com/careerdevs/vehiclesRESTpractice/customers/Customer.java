@@ -16,6 +16,13 @@ public class Customer {
 
     public Customer() {}
 
+    public Customer(String firstName, String lastName, String email, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+    }
+
     public Customer(Long id, String firstName, String lastName, String email, String phone) {
         this.id = id;
         this.firstName = firstName;

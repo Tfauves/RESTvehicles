@@ -17,7 +17,7 @@ public class CustomerController {
 
     public CustomerController() {
         Long id = idCounter.incrementAndGet();
-        customers.put(id, new Customer(id, "Jasper", "Canine", "JJCdog@K9.com", "123_456_6785" ));
+        customers.put(id, new Customer(id,"Jasper", "Canine", "JJCdog@K9.com", "123_456_6785" ));
 
     }
     @GetMapping
@@ -36,5 +36,28 @@ public class CustomerController {
         newCustomer.setId(id);
         customers.put(id,newCustomer);
         return newCustomer;
+    }
+
+    @PutMapping("/{id}")
+    public Customer updateCustomer(@PathVariable Long id, @RequestBody Customer updateData) {
+        Customer customer = customers.get(id);
+        if (updateData.getFirstName() != null) {
+            customer.setFirstName(customer.getFirstName());
+        }
+        if (updateData.getLastName() != null) {
+            customer.setLastName(customer.getLastName());
+        }
+        if (updateData.getEmail() != null) {
+            customer.setEmail(customer.getEmail());
+        }
+        if (updateData.getPhone() != null) {
+            customer.setPhone(customer.getPhone());
+        }
+        return customer;
+    }
+
+    @DeleteMapping("{id}")
+    public void deleteCustomer(@PathVariable Long id) {
+        customers.remove(id);
     }
 }

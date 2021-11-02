@@ -17,6 +17,8 @@ public abstract class Vehicle {
         this.currentOdometer = currentOdometer;
     }
 
+
+
     public Long getId() {
         return id;
     }
