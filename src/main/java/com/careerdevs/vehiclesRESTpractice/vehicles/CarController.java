@@ -59,6 +59,28 @@ public class CarController {
         return newCar;
     }
 
+    @PutMapping("/{id}")
+    public Car updateCar (@PathVariable Long id, @RequestBody Car updateCarData) throws IllegalAccessException {
+        Car car = cars.get(id);
+
+        if (car == null) {
+            return car;
+        }
+        if(updateCarData.getMake() != null) {
+            car.setMake(updateCarData.getMake());
+        }
+        if(updateCarData.getModel() != null) {
+            car.setModel(updateCarData.getModel());
+        }
+        if (updateCarData.getYear() != null) {
+            car.setYear(updateCarData.getYear());
+        }
+        if (updateCarData.getCurrentOdometer() != null) {
+            car.setCurrentOdometer(updateCarData.getCurrentOdometer());
+        }
+        return car;
+    }
+
 
 
 }
