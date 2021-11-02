@@ -40,7 +40,8 @@ public class EmployeeController {
     }
 
     @PutMapping("/{id}")
-    public Employee updateEmployee (@PathVariable Long id, @RequestBody Employee updateEmployeeData) {
+    public Employee updateEmployee (@PathVariable Long id, @RequestBody Employee updateEmployeeData) throws IllegalAccessException {
+
         Employee emp = employees.get(id);
 
         if (emp == null) {
@@ -48,14 +49,20 @@ public class EmployeeController {
         }
 
         if (updateEmployeeData.getName() != null) {
-            updateEmployeeData.setName(updateEmployeeData.getName());
+            emp.setName(updateEmployeeData.getName());
         }
 
         if (updateEmployeeData.getDepartment() != null) {
-            updateEmployeeData.setDepartment(updateEmployeeData.getDepartment());
+            emp.setDepartment(updateEmployeeData.getDepartment());
         }
 
         return emp;
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteEmployee (@PathVariable Long id) {
+        employees.remove(id);
+    }
+
 
 }
