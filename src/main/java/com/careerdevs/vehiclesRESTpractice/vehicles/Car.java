@@ -1,4 +1,4 @@
-package com.careerdevs.vehiclesRESTpractice;
+package com.careerdevs.vehiclesRESTpractice.vehicles;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.careerdevs.vehiclesRESTpractice;
+package com.careerdevs.vehiclesRESTpractice.vehicles;
 
 public abstract class Vehicle {
     private Long id;

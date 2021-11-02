@@ -1,6 +1,7 @@
-package com.careerdevs.vehiclesRESTpractice;
+package com.careerdevs.vehiclesRESTpractice.vehicles;
 
 
+import com.careerdevs.vehiclesRESTpractice.vehicles.Car;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
