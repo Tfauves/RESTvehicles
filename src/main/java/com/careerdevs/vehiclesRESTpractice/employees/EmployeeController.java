@@ -34,6 +34,28 @@ public class EmployeeController {
     @PostMapping
     public Employee newEmployee (@RequestBody Employee newEmployee) {
         Long id = idCounter.incrementAndGet();
-        newEmployee.set
+        newEmployee.setId(id);
+        employees.put(id, newEmployee);
+        return newEmployee;
     }
+
+    @PutMapping("/{id}")
+    public Employee updateEmployee (@PathVariable Long id, @RequestBody Employee updateEmployeeData) {
+        Employee emp = employees.get(id);
+
+        if (emp == null) {
+            return emp;
+        }
+
+        if (updateEmployeeData.getName() != null) {
+            updateEmployeeData.setName(updateEmployeeData.getName());
+        }
+
+        if (updateEmployeeData.getDepartment() != null) {
+            updateEmployeeData.setDepartment(updateEmployeeData.getDepartment());
+        }
+
+        return emp;
+    }
+
 }
